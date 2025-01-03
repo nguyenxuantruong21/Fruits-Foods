@@ -4,7 +4,7 @@ import { useState } from "react";
 import { Input } from "@/components/ui/input";
 import Link from "next/link";
 
-export default function Account() {
+const Account = () => {
   const [searchOpen, setSearchOpen] = useState<boolean>(false);
   const handleToggleSearch = () => {
     setSearchOpen(!searchOpen);
@@ -54,4 +54,6 @@ export default function Account() {
       )}
     </>
   );
-}
+};
+
+export default Account;

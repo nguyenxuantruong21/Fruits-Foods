@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1,
+    "name": "Sản phẩm 11",
+    "slug": "san-pham-1",
+    "price": "1.000đ / kg",
+    "category": "Chuyên mục 1",
+    "description": "Mo ta san pham 1",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQsPc6ApIJfGaMBJ3WW0AE2OYr3RY1IDHBuxQ&s"
+  },
+  {
+    "id": 2,
+    "name": "Sản phẩm 21",
+    "slug": "san-pham-2",
+    "price": "1.000đ / kg",
+    "category": "Chuyên mục 2",
+    "description": "Mo ta san pham 2",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQsPc6ApIJfGaMBJ3WW0AE2OYr3RY1IDHBuxQ&s"
+  },
+  {
+    "id": 3,
+    "name": "Sản phẩm 31",
+    "slug": "san-pham-3",
+    "price": "1.000đ / kg",
+    "category": "Chuyên mục 2",
+    "description": "Mo ta san pham 2",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQsPc6ApIJfGaMBJ3WW0AE2OYr3RY1IDHBuxQ&s"
+  },
+  {
+    "id": 4,
+    "name": "Sản phẩm 41",
+    "slug": "san-pham-4",
+    "price": "1.000đ / kg",
+    "category": "Chuyên mục 4",
+    "description": "Mo ta san pham 4",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQsPc6ApIJfGaMBJ3WW0AE2OYr3RY1IDHBuxQ&s"
+  }
+]

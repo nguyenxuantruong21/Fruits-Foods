@@ -1,4 +1,4 @@
-export default function Menu() {
+const Menu = () => {
   return (
     <ul className="flex gap-10 text-[1.6rem]">
       <li>
@@ -28,4 +28,6 @@ export default function Menu() {
       </li>
     </ul>
   );
-}
+};
+
+export default Menu;

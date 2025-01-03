@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-export default function Logo() {
+const Logo = () => {
   return (
     <div>
       <h1 className="text-primaryColor text-[4rem] font-bold">
@@ -10,4 +10,6 @@ export default function Logo() {
       </h1>
     </div>
   );
-}
+};
+
+export default Logo;

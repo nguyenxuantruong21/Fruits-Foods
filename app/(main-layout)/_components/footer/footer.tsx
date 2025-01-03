@@ -4,7 +4,7 @@ import FooterTop from "./_components/footer-top";
 
 const Footer = () => {
   return (
-    <footer className="py-20 bg-[#45595b]">
+    <footer className="py-28 bg-[#45595b]">
       <div className="container">
         <FooterTop />
         <FooterInner />
