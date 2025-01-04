@@ -1,3 +1,4 @@
+import ScrollToTopButton from "../_components/scroll-to-top-button/scroll-to-top-button";
 import BestSeller from "./best-seller/best-seller";
 import CallToAction from "./call-to-action/call-to-action";
 import Fact from "./fact/fact";
@@ -18,6 +19,7 @@ const HomePage = () => {
       <BestSeller />
       <Fact />
       <Testimonials />
+      <ScrollToTopButton />
     </>
   );
 };

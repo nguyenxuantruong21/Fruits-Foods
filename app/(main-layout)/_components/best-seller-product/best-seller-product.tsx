@@ -45,7 +45,7 @@ const BestSellerProduct = ({
                     key={count}
                     size={16}
                     className={clsx(
-                      "cursor-pointer hover:fill-primaryColor",
+                      "cursor-pointer hover:fill-primaryColor text-primaryColor",
                       count <= product.star && "fill-primaryColor"
                     )}
                   />
