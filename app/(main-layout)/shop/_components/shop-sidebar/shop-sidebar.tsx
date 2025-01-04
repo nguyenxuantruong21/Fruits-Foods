@@ -11,7 +11,7 @@ import Image from "next/image";
 const ShopSideBar = ({ isFilter = true }: { isFilter?: boolean }) => {
   const searchParams = useSearchParams();
   return (
-    <div className="flex flex-col gap-8">
+    <div className="flex flex-col gap-1">
       <h2 className="text-[4rem] font-[600] mb-5">Fresh fruits</h2>
       <Categories />
       {isFilter && (

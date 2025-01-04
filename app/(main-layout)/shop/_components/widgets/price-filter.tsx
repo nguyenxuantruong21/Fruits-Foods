@@ -74,7 +74,7 @@ const PriceFilter = () => {
   }
 
   return (
-    <div className="mb-5 flex flex-col gap-5">
+    <div className="mb-5 flex flex-col gap-3">
       <h3 className="text-[2.4rem] font-[600]">Price</h3>
       <Slider
         defaultValue={[price]}

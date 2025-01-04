@@ -39,7 +39,7 @@ const AttributeFilter = () => {
   }, []);
 
   return (
-    <div className="mb-5 flex flex-col gap-5">
+    <div className="mb-5 flex flex-col">
       {attributes.map((attribute: Attribute) => {
         const isShow = attributeValueStatus.find(
           (item: { id: number; status: boolean }) =>

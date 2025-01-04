@@ -6,7 +6,7 @@
     "price": "1.000đ / kg",
     "category": "Chuyên mục 1",
     "description": "Mo ta san pham 1",
-    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQsPc6ApIJfGaMBJ3WW0AE2OYr3RY1IDHBuxQ&s"
+    "image": "https://themewagon.github.io/fruitables/img/vegetable-item-1.jpg"
   },
   {
     "id": 2,
@@ -15,7 +15,7 @@
     "price": "1.000đ / kg",
     "category": "Chuyên mục 2",
     "description": "Mo ta san pham 2",
-    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQsPc6ApIJfGaMBJ3WW0AE2OYr3RY1IDHBuxQ&s"
+    "image": "https://themewagon.github.io/fruitables/img/fruite-item-4.jpg"
   },
   {
     "id": 3,
@@ -24,7 +24,7 @@
     "price": "1.000đ / kg",
     "category": "Chuyên mục 2",
     "description": "Mo ta san pham 2",
-    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQsPc6ApIJfGaMBJ3WW0AE2OYr3RY1IDHBuxQ&s"
+    "image": "https://themewagon.github.io/fruitables/img/fruite-item-3.jpg"
   },
   {
     "id": 4,
@@ -33,7 +33,7 @@
     "price": "1.000đ / kg",
     "category": "Chuyên mục 4",
     "description": "Mo ta san pham 4",
-    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQsPc6ApIJfGaMBJ3WW0AE2OYr3RY1IDHBuxQ&s"
+    "image": "https://themewagon.github.io/fruitables/img/fruite-item-1.jpg"
   },
   {
     "id": 5,
@@ -42,6 +42,6 @@
     "price": "1.000đ / kg",
     "category": "Chuyên mục 4",
     "description": "Mo ta san pham 4",
-    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQsPc6ApIJfGaMBJ3WW0AE2OYr3RY1IDHBuxQ&s"
+    "image": "https://themewagon.github.io/fruitables/img/featur-1.jpg"
   }
 ]

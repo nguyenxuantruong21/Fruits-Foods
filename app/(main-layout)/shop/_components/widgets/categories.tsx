@@ -3,9 +3,9 @@ import Link from "next/link";
 
 const Categories = () => {
   return (
-    <div className="mb-5 flex flex-col gap-5">
+    <div className="mb-5 flex flex-col gap-3">
       <h3 className="text-[2.4rem] font-[600]">Categories</h3>
-      <ul className="mt-5 flex flex-col gap-8">
+      <ul className="mt-5 flex flex-col gap-3">
         <li>
           <Link href={"#"} className="flex gap-2 items-center justify-between">
             <div className="flex gap-2 items-center">

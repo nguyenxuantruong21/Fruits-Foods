@@ -1,5 +1,5 @@
-import Category from "./_components/category";
-import Product from "./_components/product";
+import ProductCategory from "./_components/product-category";
+import ProductDetail from "./_components/product-detail";
 
 const CategoryProductPage = async ({
   params,
@@ -9,9 +9,9 @@ const CategoryProductPage = async ({
   const { slug } = await params;
 
   if (slug.length > 1) {
-    return <Product />;
+    return <ProductDetail slug={slug[1]} />;
   }
-  return <Category />;
+  return <ProductCategory slug={slug[0]} />;
 };
 
 export default CategoryProductPage;
