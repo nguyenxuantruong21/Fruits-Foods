@@ -13,6 +13,7 @@ import { useToast } from "@/hooks/use-toast";
 import { cloneDeep, equalsArray } from "@/app/utils/utils";
 import Quantity from "@/app/(main-layout)/_components/quantity/quantity";
 import Comments from "./commnets/comments";
+import { cn } from "@/lib/utils";
 
 interface ProductInfoProps {
   attributes: { [key: string]: unknown }[];
@@ -152,17 +153,18 @@ const ProductInfo = ({ attributes, product }: ProductInfoProps) => {
               setProductMeta({ ...productMeta, quantity: value });
             }}
           />
-          <div>
-            <Button
-              variant={`outline`}
-              className="text-[1.6rem] font-[600] text-primaryColor py-[6px] px-[16px] rounded-[999px] border-secondaryColor hover:bg-secondaryColor hover:text-white [&_svg]:size-6"
-              size={null}
-              onClick={handleClickAddToCart}
-            >
-              <ShoppingBag className="text-primaryColor" />
-              Thêm vào giỏ
-            </Button>
-          </div>
+          <Button
+            variant={`outline`}
+            className={cn(
+              "text-[1.6rem] font-[600] text-primaryColor py-[6px] px-[16px] rounded-[999px] border-secondaryColor hover:bg-secondaryColor hover:text-white [&_svg]:size-6",
+              "flex items-center justify-center"
+            )}
+            size={null}
+            onClick={handleClickAddToCart}
+          >
+            <ShoppingBag className="text-primaryColor font-bold" />
+            <span> Thêm vào giỏ</span>
+          </Button>
         </div>
       </div>
       <Tabs
