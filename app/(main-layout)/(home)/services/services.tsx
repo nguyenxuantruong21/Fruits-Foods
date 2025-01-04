@@ -55,7 +55,7 @@ const Services = () => {
               </div>
             </CardFooter>
           </Card>
-          <Card className="rounded-2xl border-[1px] border-secondaryColor">
+          <Card className="rounded-2xl border-[1px] border-primaryColor">
             <CardContent>
               <Link href={"#"}>
                 <Image src={servie03} alt="Service 3" />
