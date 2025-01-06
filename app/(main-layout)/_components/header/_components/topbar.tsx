@@ -5,7 +5,7 @@ const Topbar = () => {
   return (
     <div
       className={cn(
-        "flex justify-between bg-primaryColor p-[20px] text-white",
+        "container flex justify-between bg-primaryColor p-[20px] text-white items-center",
         "rounded-tl-[230px] rounded-br-[230px] rounded-tr-[100px] rounded-bl-[100px]"
       )}
     >

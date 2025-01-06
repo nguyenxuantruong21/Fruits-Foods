@@ -2,10 +2,15 @@ import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import paymentImage from "../images/payment.png";
 import Image from "next/image";
+import { cn } from "@/lib/utils";
 
 export default function FooterInner() {
   return (
-    <div className="grid grid-cols-4 gap-10 mt-10">
+    <div
+      className={cn(
+        "grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-10 mt-10"
+      )}
+    >
       <div>
         <p className="text-[#f4f6f8] text-[2.4rem] font-[600] mb-5">
           Why People Like us!

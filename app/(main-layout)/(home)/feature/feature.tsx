@@ -1,11 +1,17 @@
+import { cn } from "@/lib/utils";
 import { ArrowLeftRight, Car, Phone, ShieldCheck } from "lucide-react";
 
 const Feature = () => {
   return (
     <section className="py-28">
       <div className="container">
-        <div className="flex gap-10">
-          <div className="w-1/4 rounded-[10px] bg-[#f4f6f8] p-[24px]">
+        <div
+          className={cn(
+            "grid gap-10",
+            "grid-cols-1 sm:grid-cols-2 lg:grid-cols-4"
+          )}
+        >
+          <div className="rounded-[10px] bg-[#f4f6f8] p-[24px]">
             <div
               className={`mx-auto relative w-[120px] h-[120px] rounded-[50%] bg-secondaryColor after:w-[35px] after:h-[35px] after:absolute after:-bottom-[10px] after:-left-[0] after:right-[0] after:transform after:rotate-45 after:bg-secondaryColor after:mx-auto`}
             >
@@ -21,7 +27,7 @@ const Feature = () => {
               Free on order over $300
             </p>
           </div>
-          <div className="w-1/4 rounded-[10px] bg-[#f4f6f8] p-[24px]">
+          <div className="rounded-[10px] bg-[#f4f6f8] p-[24px]">
             <div
               className={`mx-auto relative w-[120px] h-[120px] rounded-[50%] bg-secondaryColor after:w-[35px] after:h-[35px] after:absolute after:-bottom-[10px] after:-left-[0] after:right-[0] after:transform after:rotate-45 after:bg-secondaryColor after:mx-auto`}
             >
@@ -37,7 +43,7 @@ const Feature = () => {
               100% security payment
             </p>
           </div>
-          <div className="w-1/4 rounded-[10px] bg-[#f4f6f8] p-[24px]">
+          <div className="rounded-[10px] bg-[#f4f6f8] p-[24px]">
             <div
               className={`mx-auto relative w-[120px] h-[120px] rounded-[50%] bg-secondaryColor after:w-[35px] after:h-[35px] after:absolute after:-bottom-[10px] after:-left-[0] after:right-[0] after:transform after:rotate-45 after:bg-secondaryColor after:mx-auto`}
             >
@@ -53,7 +59,7 @@ const Feature = () => {
               30 day money guarantee
             </p>
           </div>
-          <div className="w-1/4 rounded-[10px] bg-[#f4f6f8] p-[24px]">
+          <div className="rounded-[10px] bg-[#f4f6f8] p-[24px]">
             <div
               className={`mx-auto relative w-[120px] h-[120px] rounded-[50%] bg-secondaryColor after:w-[35px] after:h-[35px] after:absolute after:-bottom-[10px] after:-left-[0] after:right-[0] after:transform after:rotate-45 after:bg-secondaryColor after:mx-auto`}
             >

@@ -3,6 +3,7 @@ import { Search, ShoppingBag, UserRound } from "lucide-react";
 import { useState } from "react";
 import { Input } from "@/components/ui/input";
 import Link from "next/link";
+import { cn } from "@/lib/utils";
 
 const Account = () => {
   const [searchOpen, setSearchOpen] = useState<boolean>(false);
@@ -11,7 +12,7 @@ const Account = () => {
   };
   return (
     <>
-      <div className="flex gap-6 items-center">
+      <div className={cn("flex gap-6 items-center", "hidden lg:flex")}>
         <span
           className="w-[44px] h-[44px] border-[1px] border-solid border-secondaryColor rounded-[50%] flex justify-center items-center cursor-pointer hover:bg-secondaryColor"
           onClick={handleToggleSearch}

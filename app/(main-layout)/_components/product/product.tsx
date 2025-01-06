@@ -23,15 +23,18 @@ const Product = ({ product }: ProductProps) => {
     <Card
       className={cn(
         "rounded-[10px] border-[1px] border-secondaryColor",
-        "hover:shadow-2xl transition-all duration-200 ease-linear"
+        "hover:shadow-[0_8px_30px_4px_rgba(0,0,0,0.3)] transition-all duration-300 ease-in-out"
       )}
     >
-      <div className="p-0 relative">
+      <div className="p-0 relative overflow-hidden rounded-[10px] rounded-bl-none rounded-br-none">
         <Link href={getProductUrl(product.slug)}>
           <Image
             src={product.image}
             alt={product.name}
-            className="rounded-[10px] rounded-bl-none rounded-br-none"
+            className={cn(
+              "rounded-[10px] rounded-bl-none rounded-br-none",
+              "hover:scale-125 transition-all duration-300 ease-in"
+            )}
             width={1000}
             height={1000}
             style={{ maxWidth: "100%", height: "auto" }}

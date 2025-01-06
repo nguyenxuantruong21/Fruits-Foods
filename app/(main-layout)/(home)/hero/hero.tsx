@@ -9,6 +9,7 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
+import { cn } from "@/lib/utils";
 
 const Hero = () => {
   return (
@@ -20,16 +21,31 @@ const Hero = () => {
       }}
     >
       <div className="container h-full">
-        <div className="flex h-full">
-          <div className="w-full flex flex-col gap-8 items-start justify-center">
+        <div
+          className={cn(
+            "md:flex md:flex-row h-full",
+            "flex flex-col gap-5 items-center justify-center"
+          )}
+        >
+          <div
+            className={cn(
+              "w-full flex flex-col justify-center",
+              "gap-4 md:gap-8 items-center md:items-start"
+            )}
+          >
             <span className="text-secondaryColor text-[2.4rem] font-[600]">
               100% Organic Foods
             </span>
-            <span className="text-primaryColor text-8xl font-[800]">
+            <span
+              className={cn(
+                "text-primaryColor font-[800]",
+                "text-5xl md:text-8xl text-center"
+              )}
+            >
               Organic Veggies & Fruits Foods
             </span>
           </div>
-          <div className="w-full flex aligns-center flex-col justify-center">
+          <div className="w-full flex aligns-center flex-col justify-center p-10">
             <Carousel className="rounded-[10px] bg-secondaryColor ">
               <CarouselContent>
                 <CarouselItem className="relative">

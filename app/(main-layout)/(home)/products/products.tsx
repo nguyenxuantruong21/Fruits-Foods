@@ -7,6 +7,7 @@ import productsTabOnServer from "@/app/data/products_tab.json";
 import tabs from "@/app/data/tabs.json";
 import Product from "../../_components/product/product";
 import { useEffect, useState } from "react";
+import { cn } from "@/lib/utils";
 
 const Products = () => {
   const [productTab, setProductTab] = useState([]);
@@ -24,18 +25,29 @@ const Products = () => {
   }, [currentTab]);
 
   return (
-    <section className="py-28">
+    <section className="lg:py-28">
       <div className="container">
-        <Tabs defaultValue="all" onValueChange={handleTabChange}>
-          <div className="flex align-center mb-10">
-            <div className="w-2/5">
-              <h2 className="text-[4rem] font-[600]">Our Organic Products</h2>
+        <Tabs
+          defaultValue="all"
+          onValueChange={handleTabChange}
+          className="flex flex-col gap-16"
+        >
+          <div
+            className={cn(
+              "xl:flex xl:flex-row xl:align-center",
+              "flex flex-col items-center justify-center gap-5"
+            )}
+          >
+            <div className="xl:w-2/5">
+              <h2 className="text-[4rem] font-[600] text-center">
+                Our Organic Products
+              </h2>
             </div>
-            <div className="w-3/5">
-              <TabsList className="flex gap-5 bg-white justify-end">
+            <div className="xl:w-3/5 w-full">
+              <TabsList className="w-full flex flex-wrap gap-5 bg-white justify-end">
                 <TabsTrigger
                   value="all"
-                  className="text-[1.6rem] data-[state=active]:bg-secondaryColor rounded-[999px] px-[30px] py-[10px] data-[state=active]:text-[#fff]"
+                  className="bg-[#f4f6f8] text-[1.6rem] data-[state=active]:bg-secondaryColor rounded-[999px] px-[30px] py-[10px] data-[state=active]:text-[#fff]"
                 >
                   Tất cả
                 </TabsTrigger>
@@ -51,9 +63,14 @@ const Products = () => {
               </TabsList>
             </div>
           </div>
-          <div>
+          <div className="w-full mt-20">
             <TabsContent value="all">
-              <div className="grid-cols-4 grid gap-10">
+              <div
+                className={cn(
+                  "grid gap-10",
+                  "grid-cols-1  sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4"
+                )}
+              >
                 {products.map((product) => {
                   return <Product key={product.id} product={product} />;
                 })}

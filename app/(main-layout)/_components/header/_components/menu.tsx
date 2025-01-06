@@ -1,30 +1,33 @@
+import { cn } from "@/lib/utils";
+import Link from "next/link";
+
 const Menu = () => {
   return (
-    <ul className="flex gap-10 text-[1.6rem]">
+    <ul className={cn("flex gap-10 text-[1.6rem]", "hidden lg:flex")}>
       <li>
-        <a href="#" className="text-primaryColor hover:text-primaryColor">
+        <Link href={"/"} className="text-primaryColor hover:text-primaryColor">
           Home
-        </a>
+        </Link>
       </li>
       <li>
-        <a href="#" className="text-baseColor hover:text-primaryColor">
+        <Link href={"/shop"} className="text-baseColor hover:text-primaryColor">
           Shop
-        </a>
+        </Link>
       </li>
       <li>
-        <a href="#" className="text-baseColor hover:text-primaryColor">
+        <Link href="#" className="text-baseColor hover:text-primaryColor">
           Shop Detail
-        </a>
+        </Link>
       </li>
       <li>
-        <a href="#" className="text-baseColor hover:text-primaryColor">
+        <Link href="#" className="text-baseColor hover:text-primaryColor">
           Pages
-        </a>
+        </Link>
       </li>
       <li>
-        <a href="#" className="text-baseColor">
+        <Link href={"/contact"} className="text-baseColor">
           Contact
-        </a>
+        </Link>
       </li>
     </ul>
   );

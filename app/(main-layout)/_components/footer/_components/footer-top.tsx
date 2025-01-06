@@ -6,15 +6,24 @@ import { Separator } from "@/components/ui/separator";
 import { cn } from "@/lib/utils";
 export default function FooterTop() {
   return (
-    <div className="flex flex-col gap-8">
-      <div className="flex justify-between items-center">
+    <div className="flex flex-col gap-8 w-full">
+      <div
+        className={cn(
+          "lg:flex-row justify-between items-center w-full",
+          "flex flex-col items-center justify-center gap-2"
+        )}
+      >
         <div>
-          <Link href={"/"} className="flex flex-col gap-12">
-            <span className="block text-[4rem] font-[600]">Fruitables</span>
-            <span className="text-secondaryColor">Fresh products</span>
+          <Link href={"/"} className="flex flex-col gap-1">
+            <span className="block text-[4rem] font-[600] text-center">
+              Fruitables
+            </span>
+            <span className="text-secondaryColor text-center">
+              Fresh products
+            </span>
           </Link>
         </div>
-        <div className="flex w-[50%] bg-white rounded-full">
+        <div className="flex w-full lg:w-[50%] bg-white rounded-full">
           <Input
             placeholder="Your email"
             className="border-0 bg-white py-10 px-8 lg:text-[1.6rem] rounded-full rounded-tr-none rounded-br-none"
