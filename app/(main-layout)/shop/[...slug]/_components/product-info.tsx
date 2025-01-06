@@ -90,8 +90,13 @@ const ProductInfo = ({ attributes, product }: ProductInfoProps) => {
 
   return (
     <>
-      <div className="flex -mx-[15px]">
-        <div className="w-[50%] px-[15px]">
+      <div
+        className={cn(
+          "md:flex-row -mx-[15px] w-full",
+          "flex flex-col gap-10 items-center justify-center"
+        )}
+      >
+        <div className="md:w-[50%] px-[15px]">
           <Image
             src={productData.image as string}
             alt={productData.name as string}
@@ -101,7 +106,7 @@ const ProductInfo = ({ attributes, product }: ProductInfoProps) => {
             className="rounded-[10px] border-[1px] border-solid border-[#efefef]"
           />
         </div>
-        <div className="w-[50%] px-[15px]">
+        <div className="md:w-[50%] px-[15px]">
           <h2 className="text-[rgb(69,89,91)] text-[2.4rem] font-[700] mb-5">
             {productData.name as string}
           </h2>

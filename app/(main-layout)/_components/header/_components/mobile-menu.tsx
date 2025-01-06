@@ -20,8 +20,8 @@ const MobileMenu = () => {
   return (
     <Sheet open={isOpen} onOpenChange={handleToggleOpen}>
       <SheetTrigger asChild>
-        <div className="flex items-center justify-center lg:hidden">
-          <AlignJustify size={30} className="" />
+        <div className="flex items-center justify-center lg:hidden border-[2px] border-slate-300 px-3 py-2 rounded-xl cursor-pointer">
+          <AlignJustify size={20} className="text-primaryColor font-bold" />
         </div>
       </SheetTrigger>
       <SheetContent side="right" className="w-[380px]">

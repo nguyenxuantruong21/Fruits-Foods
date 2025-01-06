@@ -13,12 +13,12 @@ const ProductCategory = ({ slug }: ProductCategoryProps) => {
     <div>
       <PageTitle pageName={`Chuyên mục: ${slug}`} />
       <div className="container py-20">
-        <div className="flex">
-          <div className="w-[25%] px-10">
+        <div className="md:flex-row flex flex-col gap-10">
+          <div className="md:w-[25%] px-10">
             <ShopSideBar />
           </div>
-          <div className="w-[75%] px-10">
-            <div className="grid-cols-3 grid gap-5">
+          <div className="md:w-[75%] px-10">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
               {products.map((product) => {
                 return <Product key={product.id} product={product} />;
               })}

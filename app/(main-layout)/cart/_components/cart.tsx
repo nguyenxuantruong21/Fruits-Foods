@@ -71,7 +71,7 @@ const Cart = () => {
     localStorage.setItem("cart", JSON.stringify(cartData));
   };
   return (
-    <>
+    <div className="w-full flex flex-col gap-10">
       <Table className="md:text-[1.6rem] mb-20 border">
         <TableHeader>
           <TableRow>
@@ -127,15 +127,15 @@ const Cart = () => {
         </TableBody>
       </Table>
       {cartData.length ? (
-        <div className="flex justify-end">
-          <div className="bg-[#747d8862] w-[30%] rounded-[10px] p-[30px]">
+        <div className="w-full flex md:justify-end">
+          <div className="bg-[#747d8862] sm:w-fit rounded-[10px] p-[30px] w-full">
             <h2 className="text-[2.4rem] font-[600]">Cart Total</h2>
             <h3 className="text-[1.6rem] mb-10">
               Total: {cartTotal.toLocaleString()} $
             </h3>
             <Button
               size={null}
-              className="px-20 py-8 md:text-[2rem] rounded-[999px] text-primaryColor  font-[600]"
+              className="px-20 py-8 md:text-[2rem] rounded-[999px] text-primaryColor font-[600]"
               variant={"outline"}
             >
               Checkout
@@ -143,7 +143,7 @@ const Cart = () => {
           </div>
         </div>
       ) : null}
-    </>
+    </div>
   );
 };
 

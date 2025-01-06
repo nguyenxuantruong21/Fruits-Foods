@@ -55,13 +55,15 @@ const Product = ({ product }: ProductProps) => {
         </h3>
         <p>{product.description}</p>
       </CardContent>
-      <CardFooter className="flex justify-between">
-        <span className="text-[2rem] text-[#45595b] font-[600]">
+      <CardFooter
+        className={cn("flex flex-col items-center gap-2 justify-between")}
+      >
+        <div className="text-[2rem] text-[#45595b] font-[600]">
           {product.price}
-        </span>
+        </div>
         <Button
           variant={`outline`}
-          className="text-[1.6rem] font-[600] text-primaryColor py-[6px] px-[16px] rounded-[999px] border-secondaryColor hover:bg-secondaryColor hover:text-white [&_svg]:size-6"
+          className="text-[1.6rem] font-[600] text-primaryColor py-[4px] px-[10px] rounded-[999px] border-secondaryColor hover:bg-secondaryColor hover:text-white [&_svg]:size-6"
           size={null}
         >
           <ShoppingBag className="text-primaryColor" />

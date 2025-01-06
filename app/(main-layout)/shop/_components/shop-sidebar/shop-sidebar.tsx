@@ -21,7 +21,7 @@ const ShopSideBar = ({ isFilter = true }: { isFilter?: boolean }) => {
           <AttributeFilter />
         </>
       )}
-      <div className="w-full h-full overflow-hidden object-cover rounded-xl">
+      <div className="w-full h-full overflow-hidden object-cover rounded-xl hidden md:flex">
         <Image
           src={sidebarImage}
           height={300}

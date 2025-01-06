@@ -12,11 +12,11 @@ const ProductDetail = ({ slug }: ProductDetailProps) => {
     <div>
       <PageTitle pageName={`${slug}`} />
       <div className="container py-20">
-        <div className="flex">
-          <div className="w-[75%] px-10">
+        <div className="md:flex-row flex flex-col-reverse">
+          <div className="md:w-[75%] px-10">
             <ProductInfo attributes={productAttributes} product={product} />
           </div>
-          <div className="w-[25%] px-10">
+          <div className="w-full md:w-[25%] px-10">
             <ShopSideBar isFilter={false} />
           </div>
         </div>
