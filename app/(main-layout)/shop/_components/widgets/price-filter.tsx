@@ -3,24 +3,31 @@ import { debounce } from "@/app/utils/debounce";
 import { Slider } from "@/components/ui/slider";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
 import React, { useCallback, useEffect, useState } from "react";
+
 const MIN = 100000;
 const MAX = 1000000;
-let useFilterPrice = false; //Kiểm tra xem đã filter price hay chưa?
+const STEP = 1000;
+let useFilterPrice = false;
 
 const PriceFilter = () => {
   const [price, setPrice] = useState<number>(0);
   const [minPrice, setMinPrice] = useState<number>(0);
   const [maxPrice, setMaxPrice] = useState<number>(0);
   const [isLoading, setLoading] = useState<boolean>(true);
+
   const router = useRouter();
   const pathname = usePathname();
   const searchParams = useSearchParams();
+
   const priceFromUrl = searchParams.get("price");
   const currentSearchParams = [...searchParams.entries()];
+
+  /* handle change price */
   const handleChangePrice = ([value]: number[]) => {
     setPrice(value);
   };
 
+  /* set price, minprice, maxprice */
   useEffect(() => {
     setMinPrice(MIN);
     setMaxPrice(MAX);
@@ -32,6 +39,7 @@ const PriceFilter = () => {
     setLoading(false);
   }, [priceFromUrl]);
 
+  /* handle change url */
   const navigationPrice = useCallback(
     debounce((value: number, currentSearchParams: string[][]) => {
       let isPrice = false;
@@ -79,7 +87,7 @@ const PriceFilter = () => {
       <Slider
         defaultValue={[price]}
         min={minPrice}
-        step={1000}
+        step={STEP}
         max={maxPrice}
         className="mt-5"
         onValueChange={handleChangePrice}

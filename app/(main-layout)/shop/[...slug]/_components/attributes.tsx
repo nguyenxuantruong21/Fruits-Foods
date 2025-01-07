@@ -1,11 +1,15 @@
 import { cloneDeep } from "@/app/utils/utils";
 import { cn } from "@/lib/utils";
 import { useEffect, useState } from "react";
-const activeClass = "border-primaryColor text-primaryColor";
+
 type Attribute = {
   id: number;
   name: string;
-  values: { id: number; value: string; isActive: boolean }[];
+  values: {
+    id: number;
+    value: string;
+    isActive: boolean;
+  }[];
 };
 let isClickAttribute = false;
 
@@ -21,6 +25,8 @@ const Attributes = ({
   const [attributeList, setAttributeList] = useState<Attribute[]>(
     [] as Attribute[]
   );
+
+  /* handle change attributes */
   const handleClickAttributeValue = (valueId: number, attributeId: number) => {
     isClickAttribute = true;
     setAttributeList(
@@ -39,6 +45,7 @@ const Attributes = ({
       })
     );
   };
+
   useEffect(() => {
     const chooseValueId: number[] = [];
     setAttributeList(
@@ -86,6 +93,7 @@ const Attributes = ({
     };
     onChange(productFromApi);
   }, [attributeList]);
+
   return (
     <div className="mb-3">
       {attributeList.map((attribute) => {
@@ -105,7 +113,8 @@ const Attributes = ({
                       className={cn(
                         "border py-2 px-5 block cursor-pointer hover:border-primaryColor hover:text-primaryColor",
                         "rounded-xl",
-                        value.isActive && activeClass
+                        value.isActive &&
+                          "border-primaryColor text-primaryColor"
                       )}
                       onClick={() =>
                         handleClickAttributeValue(value.id, attribute.id)

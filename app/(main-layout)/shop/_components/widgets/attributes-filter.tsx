@@ -18,6 +18,7 @@ const AttributeFilter = () => {
     { id: number; status: boolean }[]
   >([]);
 
+  /* handle toggle menu */
   const handleToggleValue = (attributeId: number) => {
     const attributeStatusClone = JSON.parse(
       JSON.stringify(attributeValueStatus)
@@ -29,6 +30,7 @@ const AttributeFilter = () => {
     setAttributeValueStatus(attributeStatusClone);
   };
 
+  /* handle set default toggle menu is true */
   useEffect(() => {
     setAttributes(attributeData);
     setAttributeValueStatus(

@@ -3,6 +3,7 @@ import ShopSideBar from "../../_components/shop-sidebar/shop-sidebar";
 import Product from "@/app/(main-layout)/_components/product/product";
 import Pagination from "@/app/(main-layout)/_components/pagination/pagination";
 import products from "@/app/data/products.json";
+import ScrollToTopButton from "@/app/(main-layout)/_components/scroll-to-top-button/scroll-to-top-button";
 
 interface ProductCategoryProps {
   slug: string;
@@ -10,7 +11,7 @@ interface ProductCategoryProps {
 
 const ProductCategory = ({ slug }: ProductCategoryProps) => {
   return (
-    <div>
+    <>
       <PageTitle pageName={`Chuyên mục: ${slug}`} />
       <div className="container py-20">
         <div className="md:flex-row flex flex-col gap-10">
@@ -33,7 +34,8 @@ const ProductCategory = ({ slug }: ProductCategoryProps) => {
           </div>
         </div>
       </div>
-    </div>
+      <ScrollToTopButton />
+    </>
   );
 };
 

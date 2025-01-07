@@ -36,19 +36,30 @@ const ProductInfo = ({ attributes, product }: ProductInfoProps) => {
       quantity: number;
       attributes?: number[];
     }[]
-  >([] as { productId: number; quantity: number; attributes?: number[] }[]);
+  >(
+    [] as {
+      productId: number;
+      quantity: number;
+      attributes?: number[];
+    }[]
+  );
   const { toast } = useToast();
 
+  /* handle change attribute */
   const handleChooseAttribute = (data: { [key: string]: unknown }) => {
     setProductData(data);
   };
 
+  /* handle change star and scroll to commnents and active reviews */
   const handleClickStar = () => {
     if (!tabRef.current) return;
-    tabRef.current.scrollIntoView({ behavior: "smooth" });
+    tabRef.current.scrollIntoView({
+      behavior: "smooth",
+    });
     setCurrentTab("reviews");
   };
 
+  /* handle change add to cart */
   const handleClickAddToCart = () => {
     const productId = productData.id as number;
     const quantity = productMeta.quantity;
@@ -75,6 +86,7 @@ const ProductInfo = ({ attributes, product }: ProductInfoProps) => {
     });
   };
 
+  /* get data from localstorage and set to cardata */
   useEffect(() => {
     const cartData = localStorage.getItem("cart");
     if (cartData) {
@@ -82,6 +94,7 @@ const ProductInfo = ({ attributes, product }: ProductInfoProps) => {
     }
   }, []);
 
+  /* dataData  and set to localstorage */
   useEffect(() => {
     if (cartData.length) {
       localStorage.setItem("cart", JSON.stringify(cartData));

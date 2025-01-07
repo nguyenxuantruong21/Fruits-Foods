@@ -27,19 +27,22 @@ type CartItem = {
 
 const Cart = () => {
   const [cartData, setCartData] = useState<CartItem[]>([] as CartItem[]);
+
+  /* get cart data from localstorage */
   useEffect(() => {
     if (localStorage.getItem("cart")) {
       const cartData = JSON.parse(localStorage.getItem("cart") as string);
       if (!cartData) return;
 
-      console.log(`LocalStorage: ${cartData}`);
-
       //Call API bằng cách gửi cartData lên Back-End để trả về cartDataFromAPI
       setCartData(cartDataFromAPI);
     }
   }, []);
+
+  /* caculate total payment in cart */
   const cartTotal = cartData.reduce((total, item) => total + item.amount, 0);
 
+  /*handle change quantity */
   const handleChangeQuantity = (value: number, index: number) => {
     //Update localStorage
     updateCartStorage(value, index);
@@ -51,25 +54,28 @@ const Cart = () => {
     setCartData(newCartData);
   };
 
+  /* delete remove item */
   const handleRemoveItem = (index: number) => {
     removeCartStorage(index);
-
     const newCartData = cloneDeep(cartData);
     newCartData.splice(index, 1);
     setCartData(newCartData);
   };
 
+  /* update cart in local storage */
   const updateCartStorage = (value: number, index: number): void => {
     const cartData = JSON.parse(localStorage.getItem("cart") as string);
     cartData[index].quantity = value;
     localStorage.setItem("cart", JSON.stringify(cartData));
   };
 
+  /* delete remove cart item in localstorage */
   const removeCartStorage = (index: number): void => {
     const cartData = JSON.parse(localStorage.getItem("cart") as string);
     cartData.splice(index, 1);
     localStorage.setItem("cart", JSON.stringify(cartData));
   };
+
   return (
     <div className="w-full flex flex-col gap-10">
       <Table className="md:text-[1.6rem] mb-20 border">

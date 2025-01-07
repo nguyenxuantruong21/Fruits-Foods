@@ -3,6 +3,7 @@ import ShopSideBar from "../../_components/shop-sidebar/shop-sidebar";
 import ProductInfo from "./product-info";
 import product from "@/app/data/product.json";
 import productAttributes from "@/app/data/attribute_filter.json";
+import ScrollToTopButton from "@/app/(main-layout)/_components/scroll-to-top-button/scroll-to-top-button";
 
 interface ProductDetailProps {
   slug: string;
@@ -21,6 +22,7 @@ const ProductDetail = ({ slug }: ProductDetailProps) => {
           </div>
         </div>
       </div>
+      <ScrollToTopButton />
     </div>
   );
 };

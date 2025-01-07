@@ -4,6 +4,7 @@ import Pagination from "../_components/pagination/pagination";
 import Product from "../_components/product/product";
 import ShopSideBar from "./_components/shop-sidebar/shop-sidebar";
 import products from "@/app/data/products.json";
+import ScrollToTopButton from "../_components/scroll-to-top-button/scroll-to-top-button";
 
 const ShopPage = () => {
   return (
@@ -30,6 +31,7 @@ const ShopPage = () => {
           </div>
         </div>
       </div>
+      <ScrollToTopButton />
     </div>
   );
 };

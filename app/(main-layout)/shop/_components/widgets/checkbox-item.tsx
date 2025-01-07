@@ -17,7 +17,11 @@ const CheckboxItem = ({
   const router = useRouter();
   const pathname = usePathname();
   const searchParams = useSearchParams();
-  const [attributes, setAttributes] = useState<{ [key: string]: string[] }>({});
+  const [attributes, setAttributes] = useState<{
+    [key: string]: string[];
+  }>({});
+
+  /* handle change filter */
   const handleChangeFilter = (
     status: boolean,
     attributeId: string,
@@ -52,6 +56,8 @@ const CheckboxItem = ({
       .join("&");
     router.push(`${pathname}?${queryString}`);
   };
+
+  /* set default filter */
   useEffect(() => {
     const attributes: { [key: string]: string[] } = {};
     [...searchParams.entries()].forEach((item) => {

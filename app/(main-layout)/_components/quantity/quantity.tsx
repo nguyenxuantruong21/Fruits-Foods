@@ -1,4 +1,5 @@
 "use client";
+
 import { Minus, Plus } from "lucide-react";
 import { useLayoutEffect, useState } from "react";
 
@@ -10,29 +11,39 @@ const Quantity = ({
   onChange?: (value: number) => void;
 }) => {
   const [quantity, setQuantity] = useState<number>(value);
+
+  /* handle change input and check input is number */
   const handleInput = (e: React.KeyboardEvent) => {
-    const key = e.key;
+    const allowKey = ["Backspace", "Delete"];
     const pattern = /[0-9]/;
-    if (pattern.test(key)) return true;
+    const key = e.key;
+    if (pattern.test(key) || allowKey.includes(key)) return true;
     e.preventDefault();
   };
+
+  /* handle decrement quantity */
   const handleMinus = () => {
     setQuantity(quantity - 1);
     if (typeof onChange === "function") {
       onChange(quantity - 1);
     }
   };
+
+  /* handle increment quantity */
   const handlePlus = () => {
     setQuantity(quantity + 1);
     if (typeof onChange === "function") {
       onChange(quantity + 1);
     }
   };
+
+  /* handle set default quantity when quantity < 1 */
   useLayoutEffect(() => {
     if (quantity < 1) {
       setQuantity(1);
     }
   }, [quantity]);
+
   return (
     <div className="flex gap-5 items-center mb-5">
       <button
@@ -43,7 +54,7 @@ const Quantity = ({
       </button>
       <input
         type="text"
-        className="bg-[#efefef] w-[40px] p-3 text-center rounded-xl"
+        className="bg-[#efefef] w-[50px] p-3 text-center rounded-xl"
         value={quantity}
         onChange={(e) => setQuantity(Number(e.target.value))}
         onKeyDown={handleInput}
